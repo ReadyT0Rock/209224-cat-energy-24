@@ -15,7 +15,7 @@
         <img class="logo__name" src="img/mobile/logo-name.svg" width="101" height="18" alt="название магазина">
       </a>
       <nav class="navigation">
-        <button class="navigation__toggle">
+        <button class="navigation__toggle" type="button">
           <span class="visually-hidden">открыть меню</span>
         </button>
         <ul class="navigation__list reset-list">
@@ -39,8 +39,9 @@
       <div class="container">
         <h1 class="promo__title">Функциональное питание для котов</h1>
         <p class="promo__text text-spacing">Занялся собой? Займись котом!</p>
-        <img class="promo__img" src="img/mobile/index/promo.png" width="280" height="270" alt="питание для котов с курицей">
-        <a class="promo__link text-spacing" href="program.html">подобрать программу</a>
+        <img class="promo__img" src="img/mobile/index/promo.png" width="280" height="270"
+          alt="питание для котов с курицей">
+        <a class="promo__link text-spacing" href="form.html">подобрать программу</a>
       </div>
     </section>
 
@@ -99,22 +100,23 @@
         </dl>
         <b class="example__cost text-spacing">Затраты на питание: 15 000 руб.</b>
         <div class="example__images">
-          <img class="example__img-cat-fat" src="img/mobile/index/cat-fat.png" width="280" height="232" alt="кот упитанный">
-          <img class="example__img-cat-thin" src="img/mobile/index/cat-thin.png" width="243" height="232" alt="кот худой">
+          <img class="example__img-cat-fat" src="img/mobile/index/cat-fat.png" width="280" height="232"
+            alt="кот упитанный">
+          <img class="example__img-cat-thin" src="img/mobile/index/cat-thin.png" width="243" height="232"
+            alt="кот худой">
           <div class="example__checkbox">
-            <span class="text-spacing">было</span>
-            <label class="visually-hidden" for="checkbox-img">переключатель картинок</label>
-            <input type="checkbox" id="checkbox-img" checked>
-            <span class="text-spacing">стало</span>
+            <button class="example__btn text-spacing" type="button">было</button>
+            <button class="example__toggle" type="button">переключатель картинок</button>
+            <button class="example__btn text-spacing" type="button">стало</button>
           </div>
           <div class="example__range">
+            <span class="example__text text-spacing">было</span>
             <div class="example__range__scale">
-              <span class="text-spacing">было</span>
               <button class="example__range__toggle" type="button">
                 <span class="visually-hidden">Изменить картинку</span>
               </button>
-              <span class="text-spacing">стало</span>
             </div>
+            <span class="example__text text-spacing">стало</span>
           </div>
         </div>
       </div>
@@ -128,10 +130,9 @@
           <address class="contacts__address">ул. Большая Конюшенная, д. 19/8</address>
           <address class="contacts__address">Санкт-Петербург</address>
         </div>
-        <a href="#">
-          <img src="img/mobile/map.jpg" width="320" height="362"
-            alt="местоположение нашего офиса на карте: ул. Большая Конюшенная, д. 19/8 Санкт-Петербург">
-        </a>
+        <div class="contacts__map">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6037872533252!2d30.320858716276664!3d59.938716481876185!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1638320074476!5m2!1sru!2sru" height="362" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </div>
       </div>
     </section>
 
@@ -167,7 +168,8 @@
           </svg>
         </a>
       </div>
-      <a class="page-footer__copyright" href="https://htmlacademy.ru" aria-label="переход на сайт html academy">HTML
+      <a class="page-footer__copyright" href="https://htmlacademy.ru/intensive/adaptive"
+        aria-label="переход на сайт html academy">HTML
         Academy
         <svg width="27" height="34" viewBox="0 0 27 34" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path

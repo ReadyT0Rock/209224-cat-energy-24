@@ -1,0 +1,89 @@
+.example {
+  padding-top: 25px;
+  padding-bottom: 40px;
+
+  background-color: @example-bg-color-mobile;
+}
+
+.example__title {
+  margin: 0;
+  margin-bottom: 40px;
+
+  font-size: 36px;
+  line-height: 30px;
+  font-weight: 400;
+}
+
+.example__description {
+  margin-bottom: 20px;
+
+  font-family: "Arial", sans-serif;
+  color: @description-text-color;
+}
+
+.specifications {
+  margin-bottom: 20px;
+}
+
+.specifications__value {
+  font-size: 24px;
+  line-height: 24px;
+
+  border: 1px solid #cdcdcd;
+  border-radius: 3px;
+}
+
+.specifications__attribute {
+  font-family: "Arial", sans-serif;
+  font-size: 12px;
+  line-height: 12px;
+  color: @description-text-color;
+}
+
+.example__cost {
+  line-height: 20px;
+  font-weight: 400;
+}
+
+.example__img-cat-thin {
+  display: none;
+}
+
+.example__btn {
+  font-family: "Oswald", "Arial", sans-serif;
+  font-size: 16px;
+  line-height: 20px;
+
+  background-color: transparent;
+  border: none;
+}
+
+.example__toggle {
+  position: relative;
+
+  width: 85.6px;
+  height: 14px;
+
+  font-size: 0;
+
+  background-color: #ffffff;
+  border: 1px solid #cdcdcd;
+  border-radius: 6px;
+
+  &::before {
+    position: absolute;
+    content: "";
+    top: 3px;
+    left: 6px;
+
+    width: 35.7px;
+    height: 6px;
+
+    background-color: @primary-color;
+    border-radius: 6px;
+  }
+}
+
+.example__range {
+  display: none;
+}

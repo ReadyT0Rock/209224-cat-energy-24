@@ -1,0 +1,245 @@
+.program {
+  padding-bottom: 32px;
+}
+
+.program__container-title {
+  padding: 27px 0 40px 0;
+}
+
+.program__title {
+  margin: 0;
+  margin-bottom: 37px;
+
+  font-size: 36px;
+  line-height: 36px;
+  font-weight: 400;
+}
+
+.program__text {
+  margin: 0;
+}
+
+.program__form {
+  display: flex;
+  flex-direction: column;
+}
+
+.program__form input::placeholder,
+.program__form textarea::placeholder {
+  font-family: "Oswald", "Arial", sans-serif;
+  font-size: 16px;
+  line-height: 18px;
+  color: @description-text-color;
+  text-transform: uppercase;
+}
+
+.program__group {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+
+  border: none;
+
+  &--choice {
+    padding-top: 22px;
+    padding-bottom: 19px;
+
+    border-top: 1px solid #d9d9d9;
+    border-bottom: 1px solid #d9d9d9;
+  }
+
+  &--contacts {
+    padding-bottom: 23.5px;
+  }
+
+  &--comment {
+    padding-bottom: 23px;
+  }
+
+  &--add {
+    margin-bottom: 34px;
+  }
+}
+
+.program__label,
+.choose-program__label,
+.additionally__label {
+  font-size: 16px;
+}
+
+.program__item {
+  font-size: 24px;
+  line-height: 26px;
+  text-transform: none;
+}
+
+.program__item--contacts {
+  padding-top: 26px;
+  margin-bottom: 35px;
+}
+
+.program__item--comment {
+  margin-bottom: 37px;
+}
+
+.program__label--contacts {
+  position: relative;
+
+  display: flex;
+}
+
+.program__item--add {
+  margin-bottom: 34px;
+}
+
+.program__label {
+  margin-bottom: 13px;
+
+  color: @description-text-color;
+}
+
+.program__field {
+  border: 1px solid #e7e7e7;
+
+  &:hover {
+    border: 1px solid #cdcdcd;
+  }
+
+  &:focus {
+    outline: 2px solid #444444;
+  }
+
+  &--error {
+    outline: 2px solid #ff8282;
+  }
+}
+
+.program__icon {
+  position: absolute;
+  left: 230px;
+  top: 0;
+
+  fill: #222222;
+}
+
+.program__field--email:focus + .program__icon {
+  fill: @primary-color;
+}
+
+.choose-program__label,
+.additionally__label {
+  color: #222222;
+}
+
+.choose-program__item,
+.additionally__item {
+  position: relative;
+
+  margin-bottom: 12px;
+}
+
+.choose-program__label {
+  padding-left: 45px;
+
+  cursor: pointer;
+}
+
+.choose-program__radio + label::before {
+  position: absolute;
+  content: "";
+  top: -5px;
+  left: 0;
+
+  width: 30px;
+  height: 30px;
+
+  border: 1px solid #cdcdcd;
+  border-radius: 50%;
+
+  cursor: pointer;
+}
+
+.choose-program__radio:checked + label::after {
+  position: absolute;
+  content: "";
+  top: 3px;
+  left: 8px;
+
+  width: 13.5px;
+  height: 13.5px;
+
+  background-color: @primary-color;
+  border-radius: 50%;
+
+  cursor: pointer;
+}
+
+.choose-program__radio:hover + label::before,
+.choose-program__label:hover + label::before {
+  border: 1px solid #bababa;
+}
+
+.choose-program__radio:disabled + label::before,
+.choose-program__radio:checked:disabled + label::after {
+  opacity: 0.3;
+}
+
+.additionally__label {
+  padding-left: 44px;
+
+  cursor: pointer;
+}
+
+.additionally__checkbox + label::before {
+  position: absolute;
+  content: "";
+  top: -5px;
+  left: 0;
+
+  width: 30px;
+  height: 30px;
+
+  border: 1px solid #cdcdcd;
+
+  cursor: pointer;
+}
+
+.additionally__checkbox:checked + label::after {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 5px;
+
+  width: 18px;
+  height: 14px;
+
+  background: url("../img/mobile/form/tick.svg") no-repeat;
+
+  cursor: pointer;
+}
+
+.additionally__checkbox:hover + label::before,
+.additionally__label:hover + label::before {
+  border: 1px solid #bababa;
+}
+
+.additionally__checkbox:disabled + label::before,
+.additionally__checkbox:checked:disabled + label::after {
+  opacity: 0.3;
+}
+
+.program__btn {
+  margin-bottom: 21px;
+
+  .button-primary-color;
+
+  border: none;
+}
+
+.program__note {
+  font-family: "Arial", sans-serif;
+  line-height: 16px;
+  font-weight: 400;
+  text-transform: none;
+}

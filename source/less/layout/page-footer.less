@@ -1,0 +1,36 @@
+.page-footer {
+  padding-top: 95px;
+
+  background-color: @bg-color;
+}
+
+.page-footer__logo {
+  display: none;
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
+}
+
+.page-footer__copyright {
+  font-family: "Arial", sans-serif;
+  color: @description-text-color;
+
+  &:hover .page-footer__icon {
+    fill: @primary-color;
+  }
+
+  &:active,
+  &:active .page-footer__icon {
+    fill: @primary-color;
+    opacity: 0.3;
+  }
+}
+
+.page-footer__icon {
+  fill: #666666;
+}

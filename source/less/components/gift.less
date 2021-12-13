@@ -1,0 +1,43 @@
+.gift {
+  position: relative;
+  z-index: -2;
+
+  width: 280px;
+  min-height: 290px;
+  padding: 187px 61px 43px 58px;
+
+  background: url("../img/mobile/catalog/background-gift.jpg") no-repeat;
+  background-size: 280px 290px;
+
+  &::after {
+    position: absolute;
+    content: "";
+    z-index: -1;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    min-height: 100%;
+    background-color: @primary-color;
+    opacity: 0.85;
+  }
+}
+
+.gift__text {
+  position: relative;
+
+  font-family: "Arial", sans-serif;
+  font-size: 16px;
+  line-height: 20px;
+  color: #ffffff;
+
+  &::before {
+    position: absolute;
+    content: "";
+    top: -130px;
+
+    width: 78px;
+    min-height: 80px;
+    background: url("../img/mobile/catalog/icon-gift.svg") no-repeat;
+  }
+}

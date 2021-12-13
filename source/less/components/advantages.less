@@ -1,0 +1,86 @@
+.advantages {
+  padding-bottom: 49px;
+}
+
+.advantages__title {
+  margin: 0;
+  margin-bottom: 40px;
+
+  font-size: 36px;
+  line-height: 30px;
+  font-weight: 400;
+}
+
+.advantages__list {
+  display: grid;
+  grid-row-gap: 20px;
+
+  font-family: "Arial", sans-serif;
+}
+
+.advantages__item {
+  position: relative;
+
+  &::before {
+    position: absolute;
+    content: "";
+
+    width: 60px;
+    min-height: 60px;
+    background-color: @primary-color;
+  }
+
+  &--healthy::after {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+
+    width: 24.8px;
+    min-height: 28px;
+
+    background: url("../img/mobile/index/advantages-healthy.svg") no-repeat;
+  }
+
+  &--powder::after {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+
+    width: 28.3px;
+    min-height: 31px;
+
+    background: url("../img/mobile/index/advantages-powder.svg") no-repeat;
+  }
+
+  &--eat::after {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+
+    width: 25px;
+    min-height: 30px;
+
+    background: url("../img/mobile/index/advantages-eat.svg") no-repeat;
+  }
+
+  &--quick::after {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+
+    width: 24.5px;
+    min-height: 29.4px;
+
+    background: url("../img/mobile/index/advantages-quick.svg") no-repeat;
+  }
+}
+
+.advantages__description {
+  padding-left: 80px;
+
+  color: @description-text-color;
+}

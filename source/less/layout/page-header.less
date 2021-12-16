@@ -1,4 +1,67 @@
-.navigation__toggle {
+.page-header {
+  position: relative;
+  min-height: 66px;
+
+  &--program-border {
+    border-bottom: 1px solid #d9d9d9;
+  }
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+    justify-content: space-between;
+    min-height: 80px;
+    padding: 32px 30px 0;
+
+    &--program-border {
+      border: none;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    min-height: 120px;
+    padding: 54px 110px;
+  }
+}
+
+.page-header__container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: 11px 20px 17px 20px;
+
+  @media (min-width: @tablet-width) {
+    width: 174px;
+    padding: 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 202px;
+  }
+}
+
+.navigation {
+  position: absolute;
+  z-index: 2;
+
+  display: none;
+  width: 100%;
+
+  background-color: #ffffff;
+
+  @media (min-width: @tablet-width) {
+    position: relative;
+
+    display: block;
+    width: 440px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 478px;
+  }
+}
+
+.page-header__button-open-menu {
   position: relative;
 
   width: 24px;
@@ -18,9 +81,13 @@
     left: 0;
 
     width: 100%;
-    height: 1.5px;
+    height: 2px;
 
     background-color: #000000;
+  }
+
+  @media (min-width: @tablet-width) {
+    display: none;
   }
 }
 
@@ -28,10 +95,42 @@
   font-size: 20px;
   line-height: 20px;
   font-weight: 500;
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+    justify-content: space-between;
+
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: 400;
+  }
+
+  @media (min-width: @desktop-width) {
+    font-size: 20px;
+    line-height: 30px;
+  }
 }
 
 .navigation__item {
+  min-height: 66px;
+  padding-top: 22px;
+
+  text-align: center;
+
   border-top: 1px solid#E6E6E6;
+
+  @media (min-width: @tablet-width) {
+    min-height: 36px;
+    padding-top: 0;
+
+    text-align: start;
+
+    border: 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    min-height: 40px;
+  }
 }
 
 .navigation__link {

@@ -12,8 +12,9 @@ html {
 body {
   display: flex;
   flex-direction: column;
+  width: @mobile-width-only;
   min-height: 100%;
-  margin: 0;
+  margin: 0 auto;
 
   font-family: "Oswald", "Arial", sans-serif;
   font-size: 14px;
@@ -22,6 +23,14 @@ body {
   color: #000000;
 
   background-color: #ffffff;
+
+  @media (min-width: @tablet-width) {
+    width: @tablet-width;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: @desktop-width;
+  }
 }
 
 a {

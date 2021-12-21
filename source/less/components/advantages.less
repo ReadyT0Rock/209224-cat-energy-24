@@ -1,9 +1,12 @@
 .advantages {
+  width: @mobile-width-only;
   min-height: 429px;
   padding: 0 20px;
   padding-bottom: 49px;
+  margin: 0 auto;
 
   @media (min-width: @tablet-width) {
+    width: @tablet-width;
     min-height: 676px;
     padding: 0 30px;
 
@@ -11,8 +14,12 @@
   }
 
   @media (min-width: @desktop-width) {
+    width: @desktop-width;
     min-height: 398px;
     padding: 0 110px;
+    padding-bottom: 26px;
+
+    border: 0;
   }
 }
 

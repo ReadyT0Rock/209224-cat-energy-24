@@ -3,16 +3,16 @@
 
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>HTML Academy: Кэт энерджи</title>
   <link rel="stylesheet" href="./css/style.css">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
 </head>
 
 <body>
 
   <header class="page-header page-header--program-border">
     <div class="page-header__container">
-      <a class="logo" href="index.html" >
+      <a class="logo" href="index.html">
         <img class="logo__icon" src="img/mobile/logo-icon.svg" width="34" height="38" alt="логотип магазина cat energy">
       </a>
       <a class="logo" href="index.html">
@@ -44,7 +44,6 @@
         <h1 class="program__title">Подбор программы</h1>
         <p class="program__text text-spacing">Заполните анкету, и мы подберем программу питания для вашего кота</p>
       </div>
-
         <form class="program__form text-spacing" action="https://echo.htmlacademy.ru/" method="get">
           <div class="program__container">
           <fieldset class="program__group program__group--data">
@@ -77,7 +76,6 @@
               </li>
             </ul>
           </fieldset>
-        </div>
 
           <fieldset class="program__group program__group--contacts">
             <legend class="program__item program__item--contacts">Контактные данные (владельца кота)</legend>
@@ -124,17 +122,19 @@
             <button class="program__btn text-spacing" type="submit">Отправить заявку</button>
             <b class="program__note">* — Обязательные поля</b>
           </div>
+        </div>
         </form>
-
     </section>
 
-    <section class="contacts">
+    <section class="contacts contacts--bg-color">
       <div class="contacts__container">
         <h2 class="visually-hidden">Контакты</h2>
         <p class="contacts__text text-spacing">приглашаем к сотрудничеству дилеров!</p>
         <div>
-          <address class="contacts__address">ул. Большая<br> Конюшенная, д. 19/8</address>
-          <address class="contacts__address">Санкт-Петербург</address>
+          <address class="contacts__address">
+            <p>ул. Большая<br> Конюшенная, д. 19/8</p>
+            <p>Санкт-Петербург</p>
+          </address>
         </div>
       </div>
       <iframe class="contacts__map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6037872533252!2d30.320858716276664!3d59.938716481876185!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1638320074476!5m2!1sru!2sru" height="362" style="border: 0;" allowfullscreen="" loading="lazy"></iframe>
@@ -144,6 +144,7 @@
   </main>
 
   <footer class="page-footer">
+    <div class="page-footer__container">
     <a class="page-footer__logo" href="index.html">
       <img src="img/footer-logo.svg" width="128" height="24" alt="логотип магазина cat energy">
     </a>
@@ -174,7 +175,7 @@
           d="M13.643.016 13.5 0 0 1.407v24.606L13.5 34 27 26.013V1.407L13.643.016Zm11.591 25L13.5 31.956 1.766 25.015V14.93l11.685 6.916.02 1.253-8.017-4.743-.011 1.225 8.046 4.809.02 1.286-8.045-4.758-.01 1.226L13.5 26.95l8.124-4.833V16.91l3.62-2.15-.01 10.256Zm0-11.564-3.22 1.88-1.482.875-7.065-4.187-.011 1.225 6.04 3.573-.053.031-.13.076-.86.492-4.986-2.948-.011 1.225 3.936 2.328-.933.61-.021.012-2.971-1.742-.011 1.225 1.947 1.135-1.988 1.186-11.618-6.872 11.638-6.958 11.8 6.834Zm0-1.225L13.44 5.31 1.766 12.22V2.99L13.5 1.764 25.234 2.99v9.237Z" />
       </svg>
     </a>
-
+  </div>
   </footer>
 
 </body>

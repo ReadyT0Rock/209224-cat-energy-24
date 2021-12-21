@@ -1,20 +1,27 @@
 .page-footer {
+  background-color: @bg-color;
+}
+
+.page-footer__container {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+
+  width: @mobile-width-only;
   min-height: 236px;
   padding: 95px 20px 22px 20px;
-
-  background-color: @bg-color;
+  margin: 0 auto;
 
   @media (min-width: @tablet-width) {
     flex-direction: row;
     align-items: center;
+    width: @tablet-width;
     min-height: 147px;
     padding: 56px 30px 57px 30px;
   }
 
   @media (min-width: @desktop-width) {
+    width: @desktop-width;
     min-height: 149px;
     padding: 57px 110px 58px 110px;
   }

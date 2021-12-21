@@ -4,7 +4,9 @@
 
   display: flex;
   flex-direction: column;
+  width: @mobile-width-only;
   min-height: 480px;
+  margin: 0 auto;
   margin-bottom: 20px;
   padding: 27px 20px 0 20px;
 
@@ -28,6 +30,7 @@
   }
 
   @media (min-width: @tablet-width) {
+    width: @tablet-width;
     min-height: 810px;
     padding: 0 117px 0 117px;
     margin-bottom: 0;
@@ -42,6 +45,7 @@
   }
 
   @media (min-width: @desktop-width) {
+    width: @desktop-width;
     min-height: 553px;
 
     &::before {

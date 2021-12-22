@@ -1,5 +1,9 @@
 .specifications {
   margin-bottom: 20px;
+
+  @media (min-width: @tablet-width) {
+    width: 366px;
+  }
 }
 
 .specifications__value {
@@ -8,6 +12,11 @@
 
   border: 1px solid #cdcdcd;
   border-radius: 3px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 30px;
+    line-height: 37px;
+  }
 }
 
 .specifications__attribute {
@@ -15,4 +24,9 @@
   font-size: 12px;
   line-height: 12px;
   color: @description-text-color;
+
+  @media (min-width: @tablet-width) {
+    font-size: 14px;
+    line-height: 14px;
+  }
 }

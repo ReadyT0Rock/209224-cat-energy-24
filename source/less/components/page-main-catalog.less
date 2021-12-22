@@ -1,7 +1,7 @@
 .page-main__title {
-  margin: 0;
-  padding-top: 27px;
-  padding-bottom: 41px;
+  width: @mobile-width-only;
+  margin: 0 auto;
+  padding: 27px 20px 41px 20px;
 
   font-size: 36px;
   line-height: 36px;
@@ -9,4 +9,19 @@
 
   border-top: 1px solid #d9d9d9;
   border-bottom: 1px solid #d9d9d9;
+
+  @media (min-width: @tablet-width) {
+    width: @tablet-width;
+    padding: 27px 30px 41px 30px;
+
+    font-size: 60px;
+    line-height: 60px;
+
+    border: 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: @desktop-width;
+    padding: 27px 110px 41px 110px;
+  }
 }

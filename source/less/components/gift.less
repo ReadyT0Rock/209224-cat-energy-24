@@ -5,6 +5,7 @@
   width: 280px;
   min-height: 290px;
   padding: 187px 61px 43px 58px;
+  margin-bottom: 35px;
 
   background: url("../img/mobile/catalog/background-gift.jpg") no-repeat;
   background-size: 280px 290px;
@@ -20,6 +21,20 @@
     min-height: 100%;
     background-color: @primary-color;
     opacity: 0.85;
+  }
+
+  @media (min-width: @tablet-width) {
+    width: 100%;
+    min-height: 200px;
+    padding: 71px 50px 69px 422px;
+    margin-bottom: 76px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 245px;
+    min-height: 289px;
+    padding: 43px;
+    padding-top: 184px;
   }
 }
 
@@ -39,5 +54,23 @@
     width: 78px;
     min-height: 80px;
     background: url("../img/mobile/catalog/icon-gift.svg") no-repeat;
+  }
+
+  @media (min-width: @tablet-width) {
+    width: 100%;
+
+    &::before {
+      top: 0;
+      left: -300px;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 161px;
+
+    &::before {
+      top: -150px;
+      left: 0;
+    }
   }
 }

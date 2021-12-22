@@ -1,14 +1,48 @@
 .type-feed {
+  width: @mobile-width-only;
+  min-height: 472px;
+  margin: 0 auto;
   margin-bottom: 20px;
+  padding: 0 20px;
+
+  @media (min-width: @tablet-width) {
+    width: @tablet-width;
+    min-height: 774px;
+    padding: 0 30px;
+    margin-bottom: 45px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: @desktop-width;
+    min-height: 374px;
+    padding: 0 110px;
+    margin-bottom: 71px;
+  }
 }
 
 .type-feed__list {
   display: grid;
+  grid-template-columns: 1fr;
   grid-row-gap: 20px;
+
+  @media (min-width: @tablet-width) {
+    grid-row-gap: 30px;
+  }
+
+  @media (min-width: @desktop-width) {
+    grid-template-columns: 1fr 1fr;
+
+    grid-gap: 80px;
+  }
 }
 
 .type-feed__item {
   position: relative;
+
+  display: flex;
+  flex-direction: column;
+  min-height: 266px;
+  padding: 30px 20px 18px 20px;
 
   background-color: @bg-color;
 
@@ -21,12 +55,11 @@
     width: 36px;
     min-height: 50px;
 
-    background: url("../../../img/mobile/index/cat-slim.svg") no-repeat;
+    background: url("../img/mobile/index/cat-slim.svg") no-repeat;
   }
 
 
   &--muscle::after {
-
     position: absolute;
     content: "";
     top: 0;
@@ -35,7 +68,7 @@
     width: 67px;
     min-height: 28px;
 
-    background: url("../../../img/mobile/index/cat-muscle.svg") no-repeat;
+    background: url("../img/mobile/index/cat-muscle.svg") no-repeat;
   }
 
   &::before {
@@ -48,6 +81,16 @@
     background-color: @primary-color;
     border-radius: 50%;
   }
+
+  @media (min-width: @tablet-width) {
+    min-height: 372px;
+    padding: 77px 52px 52px 53px;
+  }
+
+  @media (min-width: @desktop-width) {
+    min-height: 374px;
+    padding-bottom: 55px;
+  }
 }
 
 .type-feed__title {
@@ -58,11 +101,21 @@
   font-size: 24px;
   line-height: 37px;
   font-weight: 400;
+
+  @media (min-width: @tablet-width) {
+    font-size: 36px;
+    line-height: 36px;
+  }
 }
 
 .type-feed__description {
   font-family: "Arial", sans-serif;
   color: @description-text-color;
+
+  @media (min-width: @tablet-width) {
+    font-size: 16px;
+    line-height: 24px;
+  }
 }
 
 .type-feed__link {
@@ -92,5 +145,12 @@
 
   &:active {
     opacity: 0.3;
+  }
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 30px;
+
+    border: none;
   }
 }

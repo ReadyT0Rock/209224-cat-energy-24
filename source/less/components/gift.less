@@ -4,8 +4,8 @@
 
   width: 280px;
   min-height: 290px;
-  padding: 187px 61px 43px 58px;
-  margin-bottom: 35px;
+  padding: 188px 61px 43px 58px;
+  margin-bottom: 33px;
 
   background: url("../img/mobile/catalog/background-gift.jpg") no-repeat;
   background-size: 280px 290px;
@@ -26,30 +26,34 @@
   @media (min-width: @tablet-width) {
     width: 100%;
     min-height: 200px;
-    padding: 71px 50px 69px 422px;
-    margin-bottom: 76px;
+    padding: 71px 50px 69px 423px;
+    margin-bottom: 0;
   }
 
   @media (min-width: @desktop-width) {
     width: 245px;
     min-height: 289px;
-    padding: 43px;
-    padding-top: 184px;
+    padding: 41px;
+    padding-top: 187px;
   }
 }
 
 .gift__text {
   position: relative;
 
+  margin: 0;
+
   font-family: "Arial", sans-serif;
   font-size: 16px;
   line-height: 20px;
   color: #ffffff;
+  text-align: center;
 
   &::before {
     position: absolute;
     content: "";
     top: -130px;
+    left: 43px;
 
     width: 78px;
     min-height: 80px;
@@ -57,20 +61,25 @@
   }
 
   @media (min-width: @tablet-width) {
-    width: 100%;
+    width: 161px;
+
+    text-align: left;
 
     &::before {
-      top: 0;
-      left: -300px;
+      top: -12px;
+      left: -343px;
     }
   }
 
   @media (min-width: @desktop-width) {
     width: 161px;
 
+
+    text-align: center;
+
     &::before {
-      top: -150px;
-      left: 0;
+      top: -130px;
+      left: 44px;
     }
   }
 }

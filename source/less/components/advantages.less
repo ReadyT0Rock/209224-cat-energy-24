@@ -1,14 +1,14 @@
 .advantages {
   width: @mobile-width-only;
-  min-height: 429px;
   padding: 0 20px;
-  padding-bottom: 49px;
+  padding-bottom: 20px;
   margin: 0 auto;
+  margin-bottom: 30px;
 
   @media (min-width: @tablet-width) {
     width: @tablet-width;
     min-height: 676px;
-    padding: 0 30px;
+    padding: 0 30px 37px;
 
     border-bottom: 1px solid #e6e6e6;
   }
@@ -17,7 +17,6 @@
     width: @desktop-width;
     min-height: 398px;
     padding: 0 110px;
-    padding-bottom: 26px;
 
     border: 0;
   }
@@ -25,13 +24,15 @@
 
 .advantages__title {
   margin: 0;
-  margin-bottom: 40px;
+  margin-bottom: 44px;
 
   font-size: 36px;
   line-height: 30px;
   font-weight: 400;
 
   @media (min-width: @tablet-width) {
+    margin-bottom: 40px;
+
     font-size: 60px;
     line-height: 60px;
   }
@@ -41,6 +42,7 @@
   display: grid;
   grid-template-columns: 1fr;
   grid-row-gap: 20px;
+  grid-column-gap: 60px;
 
   font-family: "Arial", sans-serif;
 
@@ -51,6 +53,7 @@
 
   @media (min-width: @desktop-width) {
     grid-template-columns: repeat(4, 1fr);
+    grid-column-gap: 80px;
   }
 }
 
@@ -71,8 +74,8 @@
   &--healthy::after {
     position: absolute;
     content: "";
-    top: 0;
-    left: 0;
+    top: 16px;
+    left: 18px;
 
     width: 24.8px;
     min-height: 28px;
@@ -83,8 +86,8 @@
   &--powder::after {
     position: absolute;
     content: "";
-    top: 0;
-    left: 0;
+    top: 13px;
+    left: 15px;
 
     width: 28.3px;
     min-height: 31px;
@@ -95,8 +98,8 @@
   &--eat::after {
     position: absolute;
     content: "";
-    top: 0;
-    left: 0;
+    top: 15px;
+    left: 18px;
 
     width: 25px;
     min-height: 30px;
@@ -107,8 +110,8 @@
   &--quick::after {
     position: absolute;
     content: "";
-    top: 0;
-    left: 0;
+    top: 16px;
+    left: 18px;
 
     width: 24.5px;
     min-height: 29.4px;
@@ -118,7 +121,7 @@
 
   @media (min-width: @tablet-width) {
     min-height: 280px;
-    padding-top: 151px;
+    padding-top: 144px;
 
     &::before {
       top: 31px;
@@ -131,13 +134,15 @@
     &--powder::after,
     &--eat::after,
     &--quick::after {
-      top: 30px;
+      top: 56px;
+      left: 26px;
     }
   }
 }
 
 .advantages__description {
-  padding-left: 80px;
+  padding-top: 3px;
+  padding-left: 81px;
   margin: 0;
 
   color: @description-text-color;
@@ -148,5 +153,37 @@
 
     font-size: 16px;
     line-height: 24px;
+
+    &--healthy::after,
+    &--powder::after,
+    &--eat::after,
+    &--quick::after {
+      position: absolute;
+      z-index: -1;
+      top: -10px;
+      left: 113px;
+
+      font-family: "Oswald", "Arial", sans-serif;
+      font-size: 280px;
+      line-height: 280px;
+      color: #f2f2f2;
+    }
+
+    &--healthy::after {
+      content: "1";
+      left: 119px;
+    }
+
+    &--powder::after {
+      content: "2";
+    }
+
+    &--eat::after {
+      content: "3";
+    }
+
+    &--quick::after {
+      content: "4";
+    }
   }
 }

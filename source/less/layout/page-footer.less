@@ -3,6 +3,7 @@
 }
 
 .page-footer__container {
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -17,13 +18,18 @@
     align-items: center;
     width: @tablet-width;
     min-height: 147px;
-    padding: 56px 30px 57px 30px;
+    padding: 0 30px 0 30px;
+
+    &::after {
+      top: 61px;
+      left: 30px;
+    }
   }
 
   @media (min-width: @desktop-width) {
     width: @desktop-width;
     min-height: 149px;
-    padding: 57px 110px 58px 110px;
+    padding: 0 110px;
   }
 }
 
@@ -49,6 +55,8 @@
   align-items: center;
 
   font-family: "Arial", sans-serif;
+  font-size: 16px;
+  line-height: 18px;
   color: @description-text-color;
 
   &:hover .page-footer__icon {

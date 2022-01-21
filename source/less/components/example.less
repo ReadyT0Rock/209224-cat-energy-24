@@ -1,7 +1,7 @@
 .example {
   position: relative;
 
-  padding-bottom: 40px;
+  padding-bottom: 43px;
 
   background-color: @bg-color-mobile;
 
@@ -17,7 +17,7 @@
   position: relative;
 
   width: @mobile-width-only;
-  padding: 0 20px 40px 20px;
+  padding: 0 20px 25px 20px;
   margin: 0 auto;
 
   @media (min-width: @tablet-width) {
@@ -55,7 +55,7 @@
 .example__container {
   @media (min-width: @tablet-width) {
     padding-top: 19px;
-    margin-bottom: 190px;
+    margin-bottom: 204px;
   }
 
   @media (min-width: @desktop-width) {
@@ -138,6 +138,18 @@
   line-height: 20px;
   font-weight: 400;
 
+  & b {
+    font-weight: normal;
+
+    &:first-child {
+      margin-right: 5px;
+
+      @media (min-width: @tablet-width) {
+        margin-right: 0;
+      }
+    }
+  }
+
   @media (min-width: @tablet-width) {
     flex-direction: column;
     justify-content: flex-start;
@@ -148,7 +160,7 @@
 
     font-size: 20px;
 
-    & p {
+    & b {
       margin: 0;
 
       &:first-child {
@@ -220,6 +232,25 @@
 
   background-color: transparent;
   border: none;
+
+  cursor: pointer;
+
+  @media (min-width: @tablet-width) {
+    width: 70px;
+    min-height: 40px;
+
+    font-size: 20px;
+    line-height: 30px;
+    text-align: center;
+
+    &--before {
+      margin-right: 13px;
+    }
+
+    &--after {
+      margin-left: 13px;
+    }
+  }
 }
 
 .example__checkbox {
@@ -269,41 +300,23 @@
     position: relative;
 
     display: flex;
+    justify-content: space-between;
     width: 592px;
     min-height: 40px;
-    margin: 135px auto 56px auto;
+    margin: 130px auto 56px auto;
   }
 
   @media (min-width: @desktop-width) {
-    margin: 75px 40px 0 auto;
+    margin: 70px 31px 0 auto;
   }
 }
 
-.example__text {
-  @media (min-width: @tablet-width) {
-    width: 70px;
-    min-height: 40px;
-
-    font-size: 20px;
-    line-height: 30px;
-    text-align: center;
-
-    &--before {
-      margin-right: 13px;
-    }
-
-    &--after {
-      margin-left: 13px;
-    }
-  }
-}
-
-.example__range__scale {
+.example__range-scale {
   @media (min-width: @tablet-width) {
     position: relative;
     width: 426px;
     height: 6px;
-    margin-top: 13px;
+    margin-top: 18px;
 
     background-color: #dcdcdc;
     border-radius: 6px;
@@ -319,7 +332,7 @@
   }
 }
 
-.example__range__toggle {
+.example__range-toggle {
   @media (min-width: @tablet-width) {
     position: relative;
 
@@ -328,6 +341,18 @@
 
     border: 1px solid #cdcdcd;
     border-radius: 50%;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.16);
+
+    cursor: pointer;
+
+    &:hover {
+      box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.19);
+    }
+
+    &:active {
+      border: 1px solid @primary-color;
+      box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.2);
+    }
 
     &::after {
       position: absolute;

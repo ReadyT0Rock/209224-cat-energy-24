@@ -18,23 +18,23 @@
       <a class="logo">
         <img class="logo__name" src="img/mobile/logo-name.svg" width="101" height="18" alt="название магазина">
       </a>
-      <button class="page-header__button-open-menu page-header__button-open-menu--closed" type="button">
+      <button class="page-header__button page-header__button--open page-header__button--close" type="button">
         <span class="visually-hidden">открыть меню</span>
       </button>
     </div>
-      <nav class="navigation navigation--closed navigation--nojs">
-        <ul class="navigation__list reset-list">
-          <li class="navigation__item navigation__item--current">
-            <a class="navigation__link navigation__link-white-color navigation__link-white-color--current navigation__link--current text-spacing">главная</a>
-          </li>
-          <li class="navigation__item">
-            <a class="navigation__link navigation__link-white-color text-spacing" href="catalog.html">каталог продукции</a>
-          </li>
-          <li class="navigation__item">
-            <a class="navigation__link navigation__link-white-color text-spacing" href="form.html">подбор программы</a>
-          </li>
-        </ul>
-      </nav>
+    <nav class="navigation navigation--closed navigation--nojs">
+      <ul class="navigation__list reset-list">
+        <li class="navigation__item navigation__item--current">
+          <a class="navigation__link navigation__link-white-color navigation__link-white-color--current navigation__link--current text-spacing">главная</a>
+        </li>
+        <li class="navigation__item">
+          <a class="navigation__link navigation__link-white-color text-spacing" href="catalog.html">каталог продукции</a>
+        </li>
+        <li class="navigation__item">
+          <a class="navigation__link navigation__link-white-color text-spacing" href="form.html">подбор программы</a>
+        </li>
+      </ul>
+    </nav>
   </header>
 
   <main class="page-main">
@@ -110,10 +110,10 @@
             <dd class="specifications__value text-spacing">60 дней</dd>
           </div>
         </dl>
-        <b class="example__cost text-spacing">
-          <p>Затраты на питание:</p>
-          <p>15 000 руб.</p>
-        </b>
+        <p class="example__cost text-spacing">
+          <b>Затраты на питание:</b>
+          <b>15 000 руб.</b>
+        </p>
       </div>
     </div>
   </div>
@@ -131,15 +131,15 @@
             <button class="example__btn text-spacing" type="button">стало</button>
           </div>
           <div class="example__range">
-            <span class="example__text example__text--before text-spacing">было</span>
-            <div class="example__range__scale">
+            <button class="example__btn example__text--before text-spacing">было</button>
+            <div class="example__range-scale">
               <div>
-                <button class="example__range__toggle" type="button">
+                <button class="example__range-toggle" type="button">
                   <span class="visually-hidden">Изменить картинку</span>
                 </button>
               </div>
             </div>
-            <span class="example__text example__text--after text-spacing">стало</span>
+            <button class="example__btn example__text--after text-spacing">стало</button>
           </div>
         </div>
       </div>
@@ -197,7 +197,7 @@
   </div>
   </footer>
 
-  <script src="js/skript.js"></script>
+  <script src="js/script.js"></script>
 
 </body>
 

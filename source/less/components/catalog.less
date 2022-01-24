@@ -1,20 +1,20 @@
 .catalog {
   @media (min-width: @tablet-width) {
-    margin-bottom: 40px;
+    margin-bottom: 89px;
   }
 }
 
 .catalog__container {
-  width: @mobile-width-only;
-  margin: 0 auto;
-
   @media (min-width: @tablet-width) {
     width: @tablet-width;
-    padding-top: 122px;
+    padding-top: 121px;
+    margin: 0 auto;
+    margin-bottom: 89px;
   }
 
   @media (min-width: @desktop-width) {
     width: @desktop-width;
+    margin-bottom: 98px;
   }
 }
 
@@ -107,15 +107,19 @@
 
   display: flex;
   flex-wrap: wrap;
+  width: @mobile-width-only;
   height: 100%;
   padding: 20px;
+  margin: 0 auto;
 
   @media (min-width: @tablet-width) {
+    width: 324px;
     flex-direction: column;
     padding: 0 38px 39px 38px;
   }
 
   @media (min-width: @desktop-width) {
+    width: 245px;
     padding: 0 37px 39px 39px;
   }
 
@@ -192,8 +196,68 @@
   margin-top: 12px;
   margin-left: 36px;
 
+  &--chicken1000 {
+    margin-left: 28px;
+  }
+
+  &--fish500 {
+    margin-top: 26px;
+  }
+
+  &--fish1000 {
+    margin-top: 11px;
+    margin-left: 28px;
+  }
+
+  &--buckwheat500 {
+    margin-top: 29px;
+    margin-left: 36px;
+  }
+
+  &--buckwheat1000 {
+    margin-top: 11px;
+    margin-left: 28px;
+  }
+
+  &--rice500 {
+    margin-top: 23px;
+    margin-left: 34px;
+  }
+
   @media (min-width: @tablet-width) {
     position: absolute;
+
+    &--chicken500,
+    &--fish500,
+    &--buckwheat500,
+    &--rice500 {
+      margin-top: -43px;
+      margin-left: 43px;
+    }
+
+    &--chicken1000,
+    &--fish1000,
+    &--buckwheat1000 {
+      margin-top: -70px;
+      margin-left: 40px;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    &--chicken500,
+    &--fish500,
+    &--buckwheat500,
+    &--rice500 {
+      margin-top: -51px;
+      margin-left: 4px;
+    }
+
+    &--chicken1000,
+    &--fish1000,
+    &--buckwheat1000 {
+      margin-top: -81px;
+      margin-left: 2px;
+    }
   }
 }
 

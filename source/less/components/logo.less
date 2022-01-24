@@ -1,4 +1,16 @@
 .logo {
+  &:first-of-type {
+    margin-right: 55px;
+  }
+
+  &:last-of-type {
+    margin-top: 5px;
+
+    @media (min-width: @tablet-width) {
+      display: none;
+    }
+  }
+
   &:hover {
     opacity: 0.8;
   }

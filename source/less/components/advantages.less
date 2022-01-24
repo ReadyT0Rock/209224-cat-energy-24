@@ -6,19 +6,30 @@
   margin-bottom: 30px;
 
   @media (min-width: @tablet-width) {
-    width: @tablet-width;
+    width: 100%;
     min-height: 676px;
-    padding: 0 30px 37px;
 
     border-bottom: 1px solid #e6e6e6;
   }
 
   @media (min-width: @desktop-width) {
-    width: @desktop-width;
     min-height: 398px;
-    padding: 0 110px;
+    padding: 0;
 
     border: 0;
+  }
+}
+
+.advantages__container {
+  @media (min-width: @tablet-width) {
+    width: @tablet-width;
+    padding: 0 30px 17px;
+    margin: 0 auto;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: @desktop-width;
+    padding: 0 110px;
   }
 }
 
@@ -31,7 +42,7 @@
   font-weight: 400;
 
   @media (min-width: @tablet-width) {
-    margin-bottom: 40px;
+    margin-bottom: 41px;
 
     font-size: 60px;
     line-height: 60px;
@@ -137,6 +148,10 @@
       top: 56px;
       left: 26px;
     }
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 230px;
   }
 }
 

@@ -2,7 +2,7 @@
   width: @mobile-width-only;
   min-height: 472px;
   margin: 0 auto;
-  margin-bottom: 20px;
+  margin-bottom: 24px;
   padding: 0 20px;
 
   @media (min-width: @tablet-width) {
@@ -42,15 +42,15 @@
   display: flex;
   flex-direction: column;
   min-height: 266px;
-  padding: 30px 20px 18px 20px;
+  padding: 29px 20px 18px;
 
   background-color: @bg-color;
 
   &--slimming::after {
     position: absolute;
     content: "";
-    top: 0;
-    left: 0;
+    top: 20px;
+    left: 29px;
 
     width: 36px;
     min-height: 50px;
@@ -58,12 +58,11 @@
     background: url("../img/mobile/index/cat-slim.svg") no-repeat;
   }
 
-
   &--muscle::after {
     position: absolute;
     content: "";
-    top: 0;
-    left: 0;
+    top: 34px;
+    left: 13px;
 
     width: 67px;
     min-height: 28px;
@@ -74,6 +73,8 @@
   &::before {
     position: absolute;
     content: "";
+    top: 22px;
+    left: 23px;
 
     width: 50px;
     height: 50px;
@@ -85,36 +86,113 @@
   @media (min-width: @tablet-width) {
     min-height: 372px;
     padding: 77px 52px 52px 53px;
+
+    &::before {
+      top: 90px;
+      left: 446px;
+
+      width: 200px;
+      height: 200px;
+    }
+
+    &--slimming::after {
+      top: 80px;
+      left: 475px;
+
+      width: 140px;
+      min-height: 194px;
+
+      background: url("../img/tablet/index/cat-slim.svg") no-repeat;
+    }
+
+    &--muscle::after {
+      top: 135px;
+      left: 412px;
+
+      width: 268px;
+      min-height: 112px;
+
+      background: url("../img/tablet/index/cat-muscle.svg") no-repeat;
+    }
   }
 
   @media (min-width: @desktop-width) {
     min-height: 374px;
     padding-bottom: 55px;
+    padding-left: 52px;
+
+    &::before {
+      top: 48px;
+      left: 52px;
+
+      width: 100px;
+      height: 100px;
+    }
+
+    &--slimming::after {
+      top: 41px;
+      left: 67px;
+
+      width: 70px;
+      min-height: 97px;
+
+      background: url("../img/desktop/index/cat-slim.svg") no-repeat;
+    }
+
+    &--muscle::after {
+      top: 66px;
+      left: 32px;
+
+      width: 134px;
+      min-height: 56px;
+
+      background: url("../img/desktop/index/cat-muscle.svg") no-repeat;
+    }
   }
 }
 
 .type-feed__title {
   margin: 0;
-  margin-left: 91px;
-  margin-bottom: 30px;
+  margin-left: 72px;
+  margin-bottom: 29px;
 
   font-size: 24px;
   line-height: 37px;
   font-weight: 400;
 
   @media (min-width: @tablet-width) {
+    margin-left: 0;
+    margin-bottom: 24px;
+
     font-size: 36px;
     line-height: 36px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-left: 162px;
+    margin-bottom: 75px;
   }
 }
 
 .type-feed__description {
+  width: 227px;
+  margin: 0;
+  margin-bottom: 22px;
+
   font-family: "Arial", sans-serif;
   color: @description-text-color;
 
   @media (min-width: @tablet-width) {
+    width: 340px;
+    margin-bottom: 32px;
+
     font-size: 16px;
     line-height: 24px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 467px;
+    margin-bottom: 25px;
   }
 }
 
@@ -122,6 +200,7 @@
   position: relative;
 
   display: block;
+  padding-top: 20px;
 
   font-size: 16px;
   line-height: 16px;
@@ -132,6 +211,8 @@
   &::after {
     position: absolute;
     content: "";
+    top: 21px;
+    left: 100px;
 
     width: 32px;
     height: 10px;
@@ -148,9 +229,31 @@
   }
 
   @media (min-width: @tablet-width) {
+    &::after {
+      top: 28px;
+      left: 130px;
+    }
+
     font-size: 20px;
     line-height: 30px;
 
     border: none;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 0;
+
+    &::after {
+      top: 10px;
+      left: 136px;
+    }
+  }
+
+  &--pro {
+    @media (min-width: @desktop-width) {
+      &::after {
+        left: 129px;
+      }
+    }
   }
 }

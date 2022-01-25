@@ -1,13 +1,20 @@
-.catalog__container {
-  width: @mobile-width-only;
-  margin: 0 auto;
+.catalog {
+  @media (min-width: @tablet-width) {
+    margin-bottom: 89px;
+  }
+}
 
+.catalog__container {
   @media (min-width: @tablet-width) {
     width: @tablet-width;
+    padding-top: 121px;
+    margin: 0 auto;
+    margin-bottom: 89px;
   }
 
   @media (min-width: @desktop-width) {
     width: @desktop-width;
+    margin-bottom: 98px;
   }
 }
 
@@ -15,13 +22,14 @@
   @media (min-width: @tablet-width) {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-row-gap: 90px;
+    grid-row-gap: 140px;
     grid-column-gap: 60px;
     padding: 0 30px;
   }
 
   @media (min-width: @desktop-width) {
     grid-template-columns: repeat(4, 1fr);
+    grid-row-gap: 145px;
     grid-column-gap: 80px;
     padding: 0 110px;
   }
@@ -29,30 +37,50 @@
 
 .feed__title {
   width: 76px;
+  margin: 0;
+  margin-bottom: 14px;
 
   font-size: 16px;
   line-height: 20px;
   font-weight: 400;
   color: #222222;
 
-  &--add {
-    width: 100%;
-  }
-
   @media (min-width: @tablet-width) {
     width: 145px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 19px;
 
     font-size: 20px;
-    line-height: 24px;
+    line-height: 22px;
     text-align: center;
   }
 
   @media (min-width: @desktop-width) {
+    margin-left: 16px;
+
     line-height: 21px;
+  }
+
+  &--add {
+    width: 100%;
+    margin-bottom: 7px;
+
+    @media (min-width: @tablet-width) {
+      width: 167px;
+      margin-bottom: 23px;
+    }
+
+    @media (min-width: @desktop-width) {
+      margin-left: 1px;
+      margin-bottom: 24px;
+    }
   }
 }
 
 .feed__item {
+  min-height: 209px;
+
   border-bottom: 1px solid #ebebeb;
 
   @media (min-width: @tablet-width) {
@@ -63,8 +91,6 @@
     background-color: #f2f2f2;
 
     &--add {
-      padding-top: 161px;
-
       border: 2px solid #f2f2f2;
       background-color: #ffffff;
     }
@@ -81,30 +107,173 @@
 
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  width: @mobile-width-only;
   height: 100%;
   padding: 20px;
+  margin: 0 auto;
+
+  @media (min-width: @tablet-width) {
+    width: 324px;
+    flex-direction: column;
+    padding: 0 38px 39px 38px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 245px;
+    padding: 0 37px 39px 39px;
+  }
 
   &--add {
     justify-content: flex-end;
-    padding-top: 60px;
+    padding-top: 79px;
 
     text-align: center;
+
+    &::after {
+      position: absolute;
+      content: "";
+      top: 40px;
+      left: 145px;
+
+      width: 30px;
+      height: 2px;
+
+      background-color: #d3d3d3;
+    }
+
+    &::before {
+      position: absolute;
+      content: "";
+      top: 40px;
+      left: 145px;
+
+      width: 30px;
+      height: 2px;
+
+      transform: rotate(90deg);
+
+      background-color: #d3d3d3;
+    }
+
+    @media (min-width: @tablet-width) {
+      justify-content: flex-start;
+      padding: 162px 35px 39px 37px;
+
+      &::after {
+        top: 82px;
+        left: 130px;
+
+        width: 60px;
+        height: 2px;
+      }
+
+      &::before {
+        top: 80px;
+        left: 131px;
+
+        width: 60px;
+        height: 2px;
+      }
+    }
+
+    @media (min-width: @desktop-width) {
+      padding-top: 160px;
+
+      &::after {
+        top: 79px;
+        left: 90px;
+      }
+
+      &::before {
+        top: 78px;
+        left: 91px;
+      }
+    }
+  }
+}
+
+.feed__img {
+  margin-top: 12px;
+  margin-left: 36px;
+
+  &--chicken1000 {
+    margin-left: 28px;
+  }
+
+  &--fish500 {
+    margin-top: 26px;
+  }
+
+  &--fish1000 {
+    margin-top: 11px;
+    margin-left: 28px;
+  }
+
+  &--buckwheat500 {
+    margin-top: 29px;
+    margin-left: 36px;
+  }
+
+  &--buckwheat1000 {
+    margin-top: 11px;
+    margin-left: 28px;
+  }
+
+  &--rice500 {
+    margin-top: 23px;
+    margin-left: 34px;
   }
 
   @media (min-width: @tablet-width) {
-    flex-direction: column;
-    padding: 0 36px 39px 36px;
+    position: absolute;
+
+    &--chicken500,
+    &--fish500,
+    &--buckwheat500,
+    &--rice500 {
+      margin-top: -43px;
+      margin-left: 43px;
+    }
+
+    &--chicken1000,
+    &--fish1000,
+    &--buckwheat1000 {
+      margin-top: -70px;
+      margin-left: 40px;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    &--chicken500,
+    &--fish500,
+    &--buckwheat500,
+    &--rice500 {
+      margin-top: -51px;
+      margin-left: 4px;
+    }
+
+    &--chicken1000,
+    &--fish1000,
+    &--buckwheat1000 {
+      margin-top: -81px;
+      margin-left: 2px;
+    }
   }
 }
 
 .feed__description {
-  width: 142px;
+  width: 140px;
   margin-left: auto;
 
   @media (min-width: @tablet-width) {
     width: 100%;
+    padding-top: 162px;
     margin-left: 0;
+    margin-bottom: 11px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 165px;
   }
 }
 
@@ -112,6 +281,25 @@
   display: flex;
   flex-direction: column;
   width: 100%;
+  margin: 0;
+  margin-bottom: 22px;
+
+  & div {
+    display: flex;
+    justify-content: space-between;
+
+    @media (min-width: @tablet-width) {
+      padding: 7px 0;
+
+      border-bottom: 1px solid #cdcdcd;
+    }
+  }
+}
+
+.feed__attribute {
+  @media (min-width: @desktop-width) {
+    margin-left: 2px;
+  }
 }
 
 .feed__specifications,
@@ -128,6 +316,20 @@
 
 .feed__text {
   width: 100%;
+  margin: 0;
+  margin-bottom: 22px;
+
+  @media (min-width: @tablet-width) {
+    width: 167px;
+    margin-left: 40px;
+    margin-bottom: 85px;
+
+    line-height: 18px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-left: 0;
+  }
 }
 
 .feed__link-button {
@@ -135,6 +337,7 @@
   text-align: center;
   width: 100%;
   min-height: 40px;
+  padding-top: 10px;
 
   .button-primary-color;
   font-size: 16px;
@@ -152,5 +355,13 @@
     &:active {
       opacity: 0.3;
     }
+  }
+
+  @media (min-width: @tablet-width) {
+    padding-top: 12px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 10px;
   }
 }

@@ -1,12 +1,30 @@
 .social {
-  align-self: center;
   min-height: 63px;
+  padding-top: 20px;
 
   border-top: 1px solid #d9d9d9;
   border-bottom: 1px solid #d9d9d9;
 
   @media (min-width: @tablet-width) {
+    padding-top: 12px;
+
     border: 0;
+  }
+}
+
+.social__wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 23px);
+  grid-column-gap: 36px;
+  width: 145px;
+  min-height: 20px;
+  margin-left: auto;
+  margin-right: auto;
+
+  @media (min-width: @tablet-width) {
+    grid-column-gap: 37px;
+    width: 129px;
+    min-height: 33px;
   }
 }
 
@@ -20,5 +38,35 @@
   &:active {
     fill: @primary-color;
     opacity: 0.3;
+  }
+
+  &--vk {
+    margin-left: 5px;
+  }
+
+  &--instagram {
+    margin-top: 2px;
+    margin-left: 5px;
+  }
+
+  @media (min-width: @tablet-width) {
+    &--vk {
+      width: 30px;
+      height: 32px;
+      margin-left: 12px;
+    }
+
+    &--instagram {
+      width: 23px;
+      height: 23px;
+      margin-top: 5px;
+      margin-left: 9px;
+    }
+
+    &--facebook {
+      width: 18px;
+      height: 27px;
+      margin-top: 3px;
+    }
   }
 }

@@ -119,9 +119,13 @@
 
   border: none;
 
+  & div {
+    position: relative;
+  }
+
   &--data {
     min-height: 160px;
-    padding: 0 15px 11px 20px;
+    padding: 0 15px 11px 15px;
 
     @media (min-width: @tablet-width) {
       padding: 0 67px 52px 71px;
@@ -204,7 +208,7 @@
 
         &:first-of-type {
           width: 569px;
-          margin-right: 81px;
+          margin-right: 78px;
         }
 
         &:nth-of-type(2) {
@@ -514,7 +518,7 @@
   &--phone {
     @media (min-width: @tablet-width) {
       padding-left: 2px;
-      margin-right: 13px;
+      margin-right: 14px;
     }
 
     @media (min-width: @desktop-width) {
@@ -548,7 +552,7 @@
   &--data {
     flex-grow: 1;
     min-height: 45px;
-    padding-top: 6px;
+    padding-top: 4px;
     padding-left: 15px;
 
     &-age {
@@ -569,7 +573,7 @@
       padding-left: 20px;
     }
 
-    @media (min-width: @tablet-width) {
+    @media (min-width: @desktop-width) {
       padding-top: 8px;
       padding-left: 17px;
     }
@@ -617,14 +621,43 @@
 
 .program__icon {
   position: absolute;
-  left: 230px;
-  top: 0;
+  top: 16px;
+  left: 246px;
 
-  fill: #222222;
+  &--email {
+    stroke: #222222;
+  }
+
+  @media (min-width: @tablet-width) {
+    top: 18px;
+    left: 599px;
+  }
+
+  @media (min-width: @desktop-width) {
+    left: 533px;
+  }
+
+  &--phone {
+    top: 13px;
+    left: 247px;
+
+    @media (min-width: @tablet-width) {
+      top: 16px;
+      left: 598px;
+    }
+
+    @media (min-width: @desktop-width) {
+      left: 536px;
+    }
+  }
 }
 
-.program__field--email:focus + .program__icon {
-  fill: @primary-color;
+.program__field:focus + .program__icon {
+  stroke: @primary-color;
+}
+
+.program__field--error + .program__icon {
+  stroke: #ff8282;
 }
 
 .choose-program__label,
@@ -807,6 +840,11 @@
   @media (min-width: @tablet-width) {
     top: 6px;
     left: 8px;
+
+    width: 24px;
+    height: 18.7px;
+
+    background: url("../img/tablet/form/tick.svg") no-repeat;
   }
 }
 
@@ -819,8 +857,8 @@
   border: 1px solid #bababa;
 }
 
-.additionally__checkbox:disabled + label::before,
-.additionally__checkbox:checked:disabled + label::after {
+
+.additionally__checkbox:disabled + label {
   opacity: 0.3;
 }
 
@@ -870,7 +908,7 @@
 .program__note {
   margin-left: 63px;
 
-  font-family: "Arial", sans-serif;
+  font-family: "Arial", "Tahoma", sans-serif;
   line-height: 16px;
   font-weight: 400;
   text-transform: none;

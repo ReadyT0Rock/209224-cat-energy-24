@@ -5,7 +5,13 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>HTML Academy: Кэт энерджи</title>
-  <link rel="stylesheet" href="./css/style.css">
+  <link rel="preload" href="fonts/oswaldmedium.woff2" type="font/woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/oswaldregular.woff2" type="font/woff2" as="font" crossorigin="anonymous">
+  <link rel="icon" href="favicon.ico">
+  <link rel="icon" href="img/favicons/favicon.png" type="image/png" sizes="32x32">
+  <link rel="apple-touch-icon" href="img/favicons/favicon-apple.png">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="stylesheet" href="./css/style.min.css">
 </head>
 
 <body>
@@ -14,19 +20,19 @@
     <div class="page-header__container">
       <a class="logo">
         <picture>
-          <source media="(min-width: 1440px)" srcset="img/desktop/logo.svg" width="202" heihgt="60">
-          <source media="(min-width: 768px)" srcset="img/tablet/logo.svg" width="174" heihgt="52">
+          <source media="(min-width: 1440px)" srcset="img/desktop/logo.svg">
+          <source media="(min-width: 768px)" srcset="img/tablet/logo.svg">
           <img class="logo__icon" src="img/mobile/logo-icon.svg" width="34" height="38" alt="логотип магазина cat energy">
         </picture>
       </a>
-      <a class="logo logo--dn">
+      <a class="logo">
         <img class="logo__name" src="img/mobile/logo-name.svg" width="101" height="18" alt="название магазина">
       </a>
-      <button class="page-header__button page-header__button--open page-header__button--close" type="button">
+      <button class="page-header__button page-header__button--close" type="button"> <!-- class="page-header__button--close" внешний вид кнопки при закрытом меню -->
         <span class="visually-hidden">открыть меню</span>
       </button>
     </div>
-    <nav class="navigation navigation--closed navigation--nojs">
+    <nav class="navigation navigation--closed navigation--nojs"> <!-- class="navigation--nojs" - открытое мобильное меню по умолчанию при не работающем js -->
       <ul class="navigation__list reset-list">
         <li class="navigation__item navigation__item--current">
           <a class="navigation__link navigation__link-white-color navigation__link-white-color--current navigation__link--current text-spacing">главная</a>
@@ -48,8 +54,8 @@
         <h1 class="promo__title">Функциональное питание для котов</h1>
         <p class="promo__text text-spacing">Занялся собой? Займись котом!</p>
           <picture>
-            <source media="(min-width: 1440px)" srcset="img/desktop/index/promo.png 1x, img/desktop/index/promo@2x.png 2x" width="552" height="499">
-            <source media="(min-width: 768px)" srcset="img/tablet/index/promo.png 1x, img/tablet/index/promo@2x.png 2x" width="709" height="609">
+            <source media="(min-width: 1440px)" srcset="img/desktop/index/promo.png 1x, img/desktop/index/promo@2x.png 2x">
+            <source media="(min-width: 768px)" srcset="img/tablet/index/promo.png 1x, img/tablet/index/promo@2x.png 2x">
             <img class="promo__img" src="img/mobile/index/promo.png" srcset="img/mobile/index/promo@2x.png 2x" width="280" height="270"
             alt="питание для котов с курицей">
           </picture>
@@ -130,12 +136,12 @@
             <div class="example__wrapper">
             <div class="example__images-wrapper">
               <picture>
-                <source media="(min-width: 768px)" srcset="img/tablet/index/cat-fat.png 1x, img/tablet/index/cat-fat@2x.png 2x" width="296" height="511">
+                <source media="(min-width: 768px)" srcset="img/tablet/index/cat-fat.png 1x, img/tablet/index/cat-fat@2x.png 2x">
                 <img class="example__img-cat-fat" src="img/mobile/index/cat-fat.png" srcset="img/mobile/index/cat-fat@2x.png 2x" width="280" height="232"
                 alt="кот упитанный">
               </picture>
               <picture>
-                <source media="(min-width: 768px)" srcset="img/tablet/index/cat-thin.png 1x, img/tablet/index/cat-thin@2x.png 2x" width="296" height="511">
+                <source media="(min-width: 768px)" srcset="img/tablet/index/cat-thin.png 1x, img/tablet/index/cat-thin@2x.png 2x">
                 <img class="example__img-cat-thin" src="img/mobile/index/cat-thin.png" srcset="img/mobile/index/cat-thin@2x.png 2x" width="243" height="232"
                 alt="кот худой">
               </picture>
@@ -146,7 +152,7 @@
             <button class="example__btn text-spacing" type="button">стало</button>
           </div>
           <div class="example__range">
-            <button class="example__btn text-spacing">было</button>
+            <button class="example__btn example__btn--before text-spacing">было</button>
             <div class="example__range-scale">
               <div>
                 <button class="example__range-toggle" type="button">
@@ -154,7 +160,7 @@
                 </button>
               </div>
             </div>
-            <button class="example__btn text-spacing">стало</button>
+            <button class="example__btn example__btn--after text-spacing">стало</button>
           </div>
           </div>
         </div>
@@ -199,7 +205,7 @@
       </a>
       <a class="social__link" href="https://www.facebook.com/htmlacademy"
         aria-label="мы в фейсбук">
-        <svg class="social__icon social__icon--facebook" width="13" height="20" viewBox="0 0 13 20" xmlns="http://www.w3.org/2000/svg"><path d="M11.5.833H8.75A4.63 4.63 0 0 0 5.51 2.15a4.45 4.45 0 0 0-1.343 3.177v2.697h-2.75v3.595h2.75v7.191h3.666v-7.19h2.75l.917-3.596H7.833V5.327a.89.89 0 0 1 .269-.635.926.926 0 0 1 .648-.263h2.75V.833Z" stroke="#666666" fill="transparent"/></svg>
+        <svg class="social__icon social__icon--facebook" width="13" height="20" viewBox="0 0 13 20" xmlns="http://www.w3.org/2000/svg"><path d="M11.5.833H8.75A4.63 4.63 0 0 0 5.51 2.15a4.45 4.45 0 0 0-1.343 3.177v2.697h-2.75v3.595h2.75v7.191h3.666v-7.19h2.75l.917-3.596H7.833V5.327a.89.89 0 0 1 .269-.635.926.926 0 0 1 .648-.263h2.75V.833Z" fill="transparent"/></svg>
       </a>
     </div>
     </div>
